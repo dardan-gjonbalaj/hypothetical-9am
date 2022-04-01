@@ -24,8 +24,8 @@ const Header = props => {
       color="black"
       w="100%"
       left="0"
-      bottom="4"
-      position={'sticky'}
+      top={[0, null, '21px']}
+      position={['relative', null, 'fixed']}
       {...props}
     >
       <Flex align="center" mr={5}>
@@ -33,7 +33,7 @@ const Header = props => {
           Chakra UI
         </Heading>
       </Flex>
-      {}
+
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
         <HamburgerIcon />
       </Box>

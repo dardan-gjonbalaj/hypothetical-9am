@@ -6,6 +6,7 @@ import {
   Text,
   Image,
   Box,
+  VStack,
 } from '@chakra-ui/react';
 import { QuestionIcon, AddIcon } from '@chakra-ui/icons';
 //import theme from './components/theme';
@@ -25,13 +26,18 @@ function App() {
         </Text>
       </Banner>
 
-      <Container px="0">
-        <Header />
-      </Container>
-      <Container pb={20} bg="#8dd9cd">
+      <Header />
+
+      <Container
+        maxW="container.xl"
+        pb={20}
+        pt={[0, null, '88px']}
+        bg="#8dd9cd"
+      >
         <Button>Hello World</Button>
         <span>Hello World</span>
-        <SimpleGrid columns={2} py={20} spacingX={2} spacingY={4}>
+
+        <SimpleGrid columns={[2, 2, 4]} py={20} spacingX={2} spacingY={4}>
           <Card
             icon={QuestionIcon}
             title="Lorem ipsum"
@@ -63,65 +69,22 @@ function App() {
 
       {/* info cards */}
 
-      <Container>
-        <Image
-          fallbackSrc="https://via.placeholder.com/400x200"
-          fit="cover"
-          width="100%"
-          h="auto"
-        />
-      </Container>
+      <VStack spacing={[8, null, 24]}>
+        <Info num={'1'} side={'row-reverse'} />
+        <Info num={'2'} side={'row'} />
+        <Info num={'3'} side={'row-reverse'} />
+        <Info num={'4'} side={'row'} />
+      </VStack>
 
-      <Container>
-        <Info num={'1'} />
-      </Container>
-
-      <Container>
-        <Image
-          fallbackSrc="https://via.placeholder.com/400x200"
-          fit="cover"
-          width="100%"
-          h="auto"
-        />
-      </Container>
-
-      <Container>
-        <Info num={'2'} />
-      </Container>
-
-      <Container>
-        <Image
-          fallbackSrc="https://via.placeholder.com/400x200"
-          fit="cover"
-          width="100%"
-          h="auto"
-        />
-      </Container>
-
-      <Container>
-        <Info num={'3'} />
-      </Container>
-      <Container>
-        <Image
-          fallbackSrc="https://via.placeholder.com/400x200"
-          fit="cover"
-          width="100%"
-          h="auto"
-        />
-      </Container>
-
-      <Container>
-        <Info num={'4'} />
-      </Container>
-      <Container bg="#e8f7f5">
+      <Container maxW="container.xl" bg="#e8f7f5">
         <Container
           display="flex"
-          flexDirection="row"
+          flexDirection={'row'}
           h="auto"
           w="100%"
           justifyContent="center"
           alignItems="center"
-          flexWrap="wrap"
+          flexWrap={['wrap', 'nowrap']}
           py="8"
           gap="10px"
         >
@@ -135,7 +98,7 @@ function App() {
 
       {/* Header 2 */}
 
-      <Container bg="#8dd9cd" py="2">
+      <Container maxW="container.xl" bg="#8dd9cd" py="2">
         <Box py="4">
           <Text fontSize="2xl" fontWeight={700} textAlign="center">
             Jumped Over The Lazy Dog
@@ -185,13 +148,11 @@ function App() {
       </Container>
 
       {/* Icon */}
-      <Container bg="#8dd9cd" py="2">
+      <Container bg="#8dd9cd" py="2" maxW="container.xl">
         <Box display="flex" py="2" justifyContent="center" alignItems="center">
           <AddIcon boxSize="8" color="#611315" />
         </Box>
-      </Container>
 
-      <Container bg="#8dd9cd" py="2">
         <Container
           display="flex"
           flexDirection="column"

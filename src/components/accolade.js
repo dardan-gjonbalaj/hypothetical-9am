@@ -1,8 +1,8 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 
 const Accolade = props => {
   return (
-    <Box p="0" w="30%" h="auto">
+    <Flex p="0" w="30%" h="auto">
       <Image
         fallbackSrc="https://via.placeholder.com/100x55"
         fit="cover"
@@ -10,7 +10,7 @@ const Accolade = props => {
         h="auto"
         border="none"
       />
-    </Box>
+    </Flex>
   );
 };
 
