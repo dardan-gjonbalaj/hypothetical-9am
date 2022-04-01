@@ -1,0 +1,34 @@
+-color-main-500: #71aea4;
+    --color-main-400: #8dd9cd;
+    --color-main-300: #a4e1d7;
+    --color-main-200: #bbe8e1;
+    --color-main-100: #d1f0eb;
+    --color-main-50: #e8f7f5;
+    --color-main-hero: #c5f6ef;
+    --color-main-hero-ci: #d6f2ed;
+    --color-accent-500: #cca663;
+    --color-accent-400: #ffd07c;
+    --color-accent-300: #ffd07c;
+    --color-accent-200: #ffd996;
+    --color-accent-100: #ffe3b0;
+    --color-accent-50: #ffeccb;
+    --color-accent-20: #fff6e5;
+    --color-red-400: #ff6448;
+}
+
+webaim.org contrast check failed with the font and background color used. WE should be assuming that people of all ages, should be able to easily access.
+
+button component is reused everywhere 
+
+atoms { 
+  banner
+  buttons
+  title component - 3 size titles (1,2,3)
+  body component
+  cards component
+  accordion component
+  carousel
+  testimonials 
+  input component
+    
+}
