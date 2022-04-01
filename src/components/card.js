@@ -16,11 +16,11 @@ const Card = props => {
         left="50%"
         transform="translateX(-50%)"
       >
-        <props.icon w="48px" h="48px" margin="auto" />
+        <props.icon w="48px" h="48px" margin="auto" color="#8dd9cd" />
       </Box>
 
-      <Box display="flex" alignItems="center" h="32" pt="40px" bg="#e8f7f5">
-        <Text margin="auto" fontSize="xl" textAlign="center">
+      <Box display="flex" alignItems="center" h="32" pt="20px" bg="#e8f7f5">
+        <Text margin="auto" fontSize="xl" textAlign="center" fontWeight={700}>
           {props.title}
         </Text>
       </Box>
