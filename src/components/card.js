@@ -25,14 +25,7 @@ const Card = props => {
         </Text>
       </Box>
 
-      <Box
-        display="flex"
-        alignItems="center"
-        bg="aqua"
-        py="5"
-        px="3"
-        bg="white"
-      >
+      <Box display="flex" alignItems="center" py="5" px="3" bg="white">
         <Text margin="auto" fontSize="md" textAlign="center" p="2">
           {props.body}
         </Text>
