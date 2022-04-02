@@ -15,7 +15,7 @@ const Header = props => {
   const handleToggle = () => (isOpen ? onClose() : onOpen());
 
   return (
-    <Container maxW="container.xl">
+    <Container maxW="container.xl" w="100%" p="0">
       <Flex
         as="nav"
         align="center"
