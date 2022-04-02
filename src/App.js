@@ -7,6 +7,7 @@ import {
   Image,
   Box,
   VStack,
+  Flex,
 } from '@chakra-ui/react';
 import { QuestionIcon, AddIcon } from '@chakra-ui/icons';
 //import theme from './components/theme';
@@ -16,6 +17,8 @@ import Card from './components/card';
 import Header from './components/header';
 import Info from './components/info';
 import Accolade from './components/accolade';
+import Panel from './components/panel';
+import Slideshow from './components/slideshow';
 
 function App() {
   return (
@@ -25,19 +28,18 @@ function App() {
           Intro Offer: $0 Virtual Medical Care + $5 Meds
         </Text>
       </Banner>
-
       <Header />
-
-      <Container
-        maxW="container.xl"
-        pb={20}
-        pt={[0, null, '88px']}
-        bg="#8dd9cd"
-      >
+      <Container maxW="100%" pb={20} pt={[0, null, '88px']} bg="#8dd9cd">
         <Button>Hello World</Button>
         <span>Hello World</span>
 
-        <SimpleGrid columns={[2, 2, 4]} py={20} spacingX={2} spacingY={4}>
+        <SimpleGrid
+          bg="#8dd9cd"
+          columns={[2, 3, 4]}
+          py={20}
+          spacingX={4}
+          spacingY={4}
+        >
           <Card
             icon={QuestionIcon}
             title="Lorem ipsum"
@@ -66,16 +68,13 @@ function App() {
           The Quick Brown Fox
         </Text>
       </Container>
-
       {/* info cards */}
-
       <VStack spacing={[8, null, 24]}>
         <Info num={'1'} side={'row-reverse'} />
         <Info num={'2'} side={'row'} />
         <Info num={'3'} side={'row-reverse'} />
         <Info num={'4'} side={'row'} />
       </VStack>
-
       <Container maxW="container.xl" bg="#e8f7f5">
         <Container
           display="flex"
@@ -95,9 +94,7 @@ function App() {
           <Accolade />
         </Container>
       </Container>
-
       {/* Header 2 */}
-
       <Container maxW="container.xl" bg="#8dd9cd" py="2">
         <Box py="4">
           <Text fontSize="2xl" fontWeight={700} textAlign="center">
@@ -107,81 +104,58 @@ function App() {
             Because it is agile.
           </Text>
         </Box>
-        <Text
-          fontSize="xl"
-          fontWeight="700"
-          color="#611315"
-          letterSpacing="wider"
-          textAlign="inherit"
-        >
-          Base Plan
-        </Text>
-        <Container
-          display="flex"
-          flexDirection="column"
-          w="100%"
-          bg="white"
-          py="2"
-        >
-          <Box w="100%" h="auto" bg="white">
-            <Text fontSize="lg" fontWeight="700" letterSpacing="wider">
-              Lorem Ipsum
-            </Text>
-            <Box display="flex">
-              <Image
-                srcSet="https://via.placeholder.com/100x100"
-                fallbackSrc="https://via.placeholder.com/100x100"
-                objectFit="scale-down"
-              />
-              <Box p={2}>
-                <Text fontSize="md">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </Text>
-                <Text fontSize="md" my="2" fontWeight="600" color="#71aea4">
-                  "$50 off Yearly Subscription"
-                </Text>
-              </Box>
-            </Box>
-          </Box>
+
+        <Container maxW="container.xl" px="0" py="2" bg="#8dd9cd">
+          <Text
+            fontSize="xl"
+            fontWeight="700"
+            color="#611315"
+            letterSpacing="wider"
+            textAlign="inherit"
+          >
+            Base-Plan
+          </Text>
         </Container>
+        <Flex flexDirection={['column', null, 'row']} pb="8">
+          <Panel />
+          {/* Icon */}
+          <Flex
+            display="flex"
+            py="2"
+            justifyContent="center"
+            alignItems="center"
+            bg="#8dd9cd"
+          >
+            <Container bg="#8dd9cd" py="2" maxW="container.xl">
+              <AddIcon boxSize="8" color="#611315" />
+            </Container>
+          </Flex>
+          <Panel />
+        </Flex>
+
+        <Container maxW="container.xl" px="0" py="2">
+          <Text
+            fontSize="xl"
+            fontWeight="700"
+            color="#611315"
+            letterSpacing="wider"
+            textAlign="inherit"
+          >
+            Add-ons
+          </Text>
+        </Container>
+        <Flex
+          spacingX="4"
+          gap="3"
+          flexDirection={['column-reverse', null, 'row']}
+        >
+          <Panel />
+          <Panel />
+          <Panel />
+        </Flex>
       </Container>
-
-      {/* Icon */}
-      <Container bg="#8dd9cd" py="2" maxW="container.xl">
-        <Box display="flex" py="2" justifyContent="center" alignItems="center">
-          <AddIcon boxSize="8" color="#611315" />
-        </Box>
-
-        <Container
-          display="flex"
-          flexDirection="column"
-          w="100%"
-          bg="white"
-          py="2"
-        >
-          <Box w="100%" h="auto" bg="white">
-            <Text fontSize="lg" fontWeight="700" letterSpacing="wider">
-              Lorem Ipsum
-            </Text>
-            <Box display="flex">
-              <Image
-                srcSet="https://via.placeholder.com/100x100"
-                fallbackSrc="https://via.placeholder.com/100x100"
-                objectFit="scale-down"
-              />
-              <Box p={2}>
-                <Text fontSize="md">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </Text>
-                <Text fontSize="md" my="2" fontWeight="600" color="#71aea4">
-                  "$50 off Yearly Subscription"
-                </Text>
-              </Box>
-            </Box>
-          </Box>
-        </Container>
+      <Container maxW="container.xl" bg="#8dd9cd" py="2">
+        <Slideshow />
       </Container>
     </ChakraProvider>
   );

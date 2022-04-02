@@ -10,7 +10,7 @@ const Banner = props => {
       top="0"
       textAlign="center"
       fontWeight="700"
-      zIndex="10"
+      zIndex="1000"
       {...props}
     />
   );

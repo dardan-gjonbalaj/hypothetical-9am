@@ -27,7 +27,7 @@ const Info = props => {
 
         <Box>
           <Text fontSize="xl" fontWeight="700">
-            Fill out the online form and check in with our doctors
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </Text>
           <Text fontSize="md" fontWeight="400">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

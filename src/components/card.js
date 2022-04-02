@@ -3,7 +3,7 @@ import { Box, Text } from '@chakra-ui/react';
 
 const Card = props => {
   return (
-    <Box pt="40px" position="relative">
+    <Box pt="40px" position="relative" w="100%">
       <Box
         display="flex"
         borderRadius="50%"
