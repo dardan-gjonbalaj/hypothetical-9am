@@ -71,7 +71,7 @@ function App() {
           </Text>
         </Container>
         <Box textAlign="center" py="4">
-          <Button>Hello World</Button>
+          <Button>Sign Up</Button>
         </Box>
         <SimpleGrid
           bg="#8dd9cd"
